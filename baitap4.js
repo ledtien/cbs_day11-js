@@ -1,10 +1,17 @@
-var length, width, perimeter, area;
+var chieuDaiInput = document.getElementById("chieuDai");
+var chieuRongInput = document.getElementById("chieuRong");
+var textRectangle = document.getElementById("textRectangle");
 
-length = 60;
-width = 20;
+function dienTich() {
+  var length = chieuDaiInput.value;
+  var width = chieuRongInput.value;
+  area = length * width;
+  textRectangle.innerText = "Diện tích là: " + area + "m2";
+}
 
-area = length * width;
-console.log({ area });
-
-perimeter = (length + width) * 2;
-console.log({ perimeter });
+function chuVi() {
+  var length = chieuDaiInput.value * 1;
+  var width = chieuRongInput.value * 1;
+  perimeter = (length + width) * 2;
+  textRectangle.innerText = "Chu vi là: " + perimeter + "m";
+}

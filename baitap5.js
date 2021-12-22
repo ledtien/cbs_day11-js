@@ -1,12 +1,16 @@
 var number, unit, ten, result;
 
-number = 67;
+var randomNumberInput = document.getElementById("randomNumber");
+var textRandomNumber = document.getElementById("textRandomNumber");
 
-ten = Math.floor(number / 10);
-console.log({ ten });
+function totalNumber() {
+  var randomNumber = randomNumberInput.value * 1;
 
-unit = number % 10;
-console.log({ unit });
+  var ten = Math.floor(randomNumber / 10);
 
-result = ten + unit;
-console.log({ result });
+  var unit = randomNumber % 10;
+
+  var result = ten + unit;
+
+  textRandomNumber.innerText = "Tổng là: " + result;
+}

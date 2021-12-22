@@ -1,6 +1,12 @@
 var salaryPerDay = 100000;
-var workDay = 20;
+var workDayInput = document.querySelector("#workDay");
+var textSalary = document.getElementById("textSalary");
 
-var salary = salaryPerDay * workDay;
+function payCheck() {
+  console.log("yes");
+  var workDay = workDayInput.value;
+  var salary = salaryPerDay * workDay;
+  textSalary.innerText = "Tổng lương nhận được là: " + salary + "VND";
+}
 
-console.log({ salary });
+// console.log({ salary });

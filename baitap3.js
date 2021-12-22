@@ -1,8 +1,12 @@
-var vnd, usd, usdVND;
-usdVND = 23500;
+var usdVND = 23500;
 
-usd = 237;
+var usdInput = document.getElementById("usd");
+var textVND = document.getElementById("textVND");
 
-vnd = usdVND * usd;
+function checkVND() {
+  var usd = usdInput.value;
+  var vnd = usdVND * usd;
+  textVND.innerText = "Số tiền VNĐ là: " + vnd + "VND";
+}
 
-console.log({ vnd });
+// console.log({ vnd });
